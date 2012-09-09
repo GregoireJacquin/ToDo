@@ -50,22 +50,54 @@
 {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
+
+#pragma mark ToDo
+
+- (void)configureCheckmarkForCell:(UITableViewCell *)cell whithAtItem:(CheckListItem *)item
+{
+        UILabel *label = (UILabel *)[cell viewWithTag:1001];
+        
+        if(item.checked)
+            label.text = @"√";
+        else
+            label.text = @"";
+}
+- (void)configureTextForCell:(UITableViewCell *)cell whitAtItem:(CheckListItem *)item
+{
+    UILabel *label = (UILabel *)[cell viewWithTag:1000];
+    label.text = item.name;
+    
+}
+
+#pragma mark UITableViewControllerDelegate
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSLog([NSString stringWithFormat:@"%d", [items count]]);
     return [items count];
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CheckListItem *item = [items objectAtIndex:indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Checklistitem"];
-    UILabel *label = (UILabel *)[tableView viewWithTag:1000];
-    NSLog([NSString stringWithFormat:@"%@", item.name]);
-    label.text = item.name;
+    
+    CheckListItem *item = [items objectAtIndex:indexPath.row];
+    
+    [self configureTextForCell:cell whitAtItem:item];
+    [self configureCheckmarkForCell:cell whithAtItem:item];
+    // Configure the cell...
     
     return cell;
-     
+}
+
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CheckListItem *item = [items objectAtIndex:indexPath.row];
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    item.checked = !item.checked;
+    
+    [self configureCheckmarkForCell:cell whithAtItem:item];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+ 
 }
 
 
