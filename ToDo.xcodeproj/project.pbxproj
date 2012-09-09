@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B87ABF4815FD20C4009B6608 /* CheckListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B87ABF4715FD20C4009B6608 /* CheckListItem.m */; };
 		B886845815FCBB10009D49C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B886845715FCBB10009D49C1 /* UIKit.framework */; };
 		B886845A15FCBB10009D49C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B886845915FCBB10009D49C1 /* Foundation.framework */; };
 		B886845C15FCBB10009D49C1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B886845B15FCBB10009D49C1 /* CoreGraphics.framework */; };
@@ -14,10 +15,12 @@
 		B886846415FCBB10009D49C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B886846315FCBB10009D49C1 /* main.m */; };
 		B886846815FCBB10009D49C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B886846715FCBB10009D49C1 /* AppDelegate.m */; };
 		B886846B15FCBB10009D49C1 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B886846915FCBB10009D49C1 /* MainStoryboard.storyboard */; };
-		B886846E15FCBB10009D49C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B886846D15FCBB10009D49C1 /* ViewController.m */; };
+		B886846E15FCBB10009D49C1 /* CheckListItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B886846D15FCBB10009D49C1 /* CheckListItemViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B87ABF4615FD20C4009B6608 /* CheckListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckListItem.h; sourceTree = "<group>"; };
+		B87ABF4715FD20C4009B6608 /* CheckListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckListItem.m; sourceTree = "<group>"; };
 		B886845315FCBB10009D49C1 /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B886845715FCBB10009D49C1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B886845915FCBB10009D49C1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -29,8 +32,8 @@
 		B886846615FCBB10009D49C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B886846715FCBB10009D49C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B886846A15FCBB10009D49C1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		B886846C15FCBB10009D49C1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B886846D15FCBB10009D49C1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B886846C15FCBB10009D49C1 /* CheckListItemViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckListItemViewController.h; sourceTree = "<group>"; };
+		B886846D15FCBB10009D49C1 /* CheckListItemViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckListItemViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +83,10 @@
 				B886846615FCBB10009D49C1 /* AppDelegate.h */,
 				B886846715FCBB10009D49C1 /* AppDelegate.m */,
 				B886846915FCBB10009D49C1 /* MainStoryboard.storyboard */,
-				B886846C15FCBB10009D49C1 /* ViewController.h */,
-				B886846D15FCBB10009D49C1 /* ViewController.m */,
+				B886846C15FCBB10009D49C1 /* CheckListItemViewController.h */,
+				B886846D15FCBB10009D49C1 /* CheckListItemViewController.m */,
+				B87ABF4615FD20C4009B6608 /* CheckListItem.h */,
+				B87ABF4715FD20C4009B6608 /* CheckListItem.m */,
 				B886845E15FCBB10009D49C1 /* Supporting Files */,
 			);
 			path = ToDo;
@@ -163,7 +168,8 @@
 			files = (
 				B886846415FCBB10009D49C1 /* main.m in Sources */,
 				B886846815FCBB10009D49C1 /* AppDelegate.m in Sources */,
-				B886846E15FCBB10009D49C1 /* ViewController.m in Sources */,
+				B886846E15FCBB10009D49C1 /* CheckListItemViewController.m in Sources */,
+				B87ABF4815FD20C4009B6608 /* CheckListItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +285,7 @@
 				B886847315FCBB10009D49C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
