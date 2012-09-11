@@ -89,11 +89,11 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CheckListItem *item = [items objectAtIndex:indexPath.row];
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    item.checked = !item.checked;
+    CheckListItem *item = [items objectAtIndex:indexPath.row];
+    [item toggleChecked];
     
     [self configureCheckmarkForCell:cell whithAtItem:item];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

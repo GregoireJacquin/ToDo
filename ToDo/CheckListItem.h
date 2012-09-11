@@ -13,4 +13,5 @@
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, assign) BOOL checked;
 
+- (void)toggleChecked;
 @end
