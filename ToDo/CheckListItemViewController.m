@@ -68,9 +68,25 @@
     label.text = item.name;
     
 }
+- (void) addItem
+{
+    int newIndex = [items count];
+    CheckListItem *item = [[CheckListItem alloc] init];
+    item.name = @"New ligne";
+    [items addObject:item];
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:newIndex inSection:0];
+    NSArray *indexPaths = [NSArray arrayWithObject:indexPath];
+    [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+}
 
 #pragma mark UITableViewControllerDelegate
-
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [items removeObjectAtIndex:indexPath.row];
+    NSArray *indexPaths = [NSArray arrayWithObject:indexPath];
+    [tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [items count];
@@ -99,6 +115,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
  
 }
+
 
 
 @end

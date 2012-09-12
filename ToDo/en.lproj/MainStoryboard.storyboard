@@ -49,7 +49,7 @@
                     <navigationItem key="navigationItem" id="QSV-Zj-Ni1">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="OZU-pq-3gf">
                             <connections>
-                                <segue destination="BXd-zv-JAJ" kind="modal" identifier="AddItem" id="P2l-PT-0W7"/>
+                                <action selector="addItem" destination="huh-7S-jf0" id="BNh-yS-ZfN"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
