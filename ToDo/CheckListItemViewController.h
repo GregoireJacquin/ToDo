@@ -11,6 +11,4 @@
 
 @interface CheckListItemViewController : UITableViewController <AddItemViewControllerDelegate>
 
--(IBAction)addItem;
-
 @end
