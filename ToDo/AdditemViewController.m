@@ -13,6 +13,9 @@
 @end
 
 @implementation AddItemViewController
+@synthesize textField;
+@synthesize doneBarButton;
+@synthesize delegate;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -26,6 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.textField becomeFirstResponder];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -36,6 +40,8 @@
 
 - (void)viewDidUnload
 {
+    [self setTextField:nil];
+    [self setDoneBarButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -46,53 +52,35 @@
     return UIInterfaceOrientationIsPortrait(interfaceOrientation);
 }
 
-#pragma mark - Table view data source
+#pragma mark - TextField delegate
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+- (BOOL)textField:(UITextField *)theTextField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    NSString *newTextField = [textField.text stringByReplacingCharactersInRange:range withString:string];
     
-    // Configure the cell...
-    
-    return cell;
+    self.doneBarButton.enabled = ([newTextField length] > 0);
+   
+    return YES;
 }
-
 
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    return 0;
 }
+
 #pragma mark ToDo AddItem
 - (void) done
 {
-    [self  dismissViewControllerAnimated:YES completion:nil];
+    CheckListItem *item = [[CheckListItem alloc] init];
+    item.name = textField.text;
+    [delegate AddItemViewController:self didFinishAddingItem:item];
+    //[self  dismissViewControllerAnimated:YES completion:nil];
 }
 - (void) cancel
 {
-    [self  dismissViewControllerAnimated:YES completion:nil];
-
+    //[self  dismissViewControllerAnimated:YES completion:nil];
+    [delegate AddItemViewControllerDidCancel:self];
 }
 @end
