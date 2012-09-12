@@ -116,6 +116,30 @@
  
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"AddItem"])
+    {
+        UINavigationController *navigationController = segue.destinationViewController;
+        AddItemViewController *controller = (AddItemViewController *)navigationController.topViewController;
+        controller.delegate = self;
+    }
+}
 
+#pragma mark - AddItemViewController Delegate
+- (void)AddItemViewController:(AddItemViewController *)controller didFinishAddingItem:(CheckListItem *)item
+{
+    int newIndex = [items count];
+    [items addObject:item];
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:newIndex inSection:0];
+    NSArray *indexPaths = [NSArray arrayWithObject:indexPath];
+    [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self dismissViewControllerAnimated:YES completion:Nil];
+}
+- (void)AddItemViewControllerDidCancel:(AddItemViewController *)controller
+{
+    [self dismissViewControllerAnimated:YES completion:Nil];
+}
 
 @end
