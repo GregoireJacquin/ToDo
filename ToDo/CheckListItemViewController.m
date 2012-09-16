@@ -113,6 +113,14 @@
         AddItemViewController *controller = (AddItemViewController *)navigationController.topViewController;
         controller.delegate = self;
     }
+    else if([segue.identifier isEqualToString:@"EditItem"])
+    {
+        UINavigationController *navigationController = segue.destinationViewController;
+        AddItemViewController *controller = (AddItemViewController *)navigationController.topViewController;
+        controller.delegate = self;
+        controller.itemToEdit = sender;
+    }
+
 }
 
 #pragma mark - AddItemViewController Delegate
@@ -129,6 +137,21 @@
 - (void)AddItemViewControllerDidCancel:(AddItemViewController *)controller
 {
     [self dismissViewControllerAnimated:YES completion:Nil];
+}
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    CheckListItem *item = [items objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:@"EditItem" sender:item];
+}
+- (void)AddItemViewController:(AddItemViewController *)controller didFinishEditItem:(CheckListItem *)item
+{
+    int index = [items indexOfObject:item];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    
+    [self configureTextForCell:cell whitAtItem:item];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

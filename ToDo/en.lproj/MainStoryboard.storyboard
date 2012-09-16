@@ -15,11 +15,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Checklistitem" id="u48-6c-yVk">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Checklistitem" id="u48-6c-yVk">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1000" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="4m4-aG-03v">
@@ -53,11 +53,14 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="BXd-zv-JAJ" kind="modal" identifier="EditItem" id="60G-dj-CsN"/>
+                    </connections>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="536" y="73"/>
         </scene>
-        <!--Add Item View Controller-->
+        <!--Add Item View Controller - Add Item-->
         <scene sceneID="5cH-ho-7ep">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CI9-MK-yqH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -97,7 +100,7 @@
                             <outlet property="delegate" destination="INq-5X-ARg" id="svX-QR-wf0"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="0q8-2P-ZE6">
+                    <navigationItem key="navigationItem" title="Add Item" id="0q8-2P-ZE6">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="xyu-Zt-zIH">
                             <connections>
                                 <action selector="cancel" destination="INq-5X-ARg" id="4Nn-Yw-uFI"/>
@@ -154,26 +157,12 @@
             <point key="canvasLocation" x="10" y="73"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="AddItemViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddItemViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancel"/>
-                <relationship kind="action" name="done"/>
-                <relationship kind="outlet" name="doneBarButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="CheckListItemViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CheckListItemViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="addItem"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="60G-dj-CsN"/>
+    </inferredMetricsTieBreakers>
 </document>
