@@ -60,11 +60,11 @@
             </objects>
             <point key="canvasLocation" x="536" y="73"/>
         </scene>
-        <!--Add Item View Controller - Add Item-->
+        <!--Detail Item View Controller - Add Item-->
         <scene sceneID="5cH-ho-7ep">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CI9-MK-yqH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="INq-5X-ARg" customClass="AddItemViewController" sceneMemberID="viewController">
+                <tableViewController id="INq-5X-ARg" customClass="DetailItemViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="jCQ-kg-U6K">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

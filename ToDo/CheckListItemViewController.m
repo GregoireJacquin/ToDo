@@ -110,13 +110,13 @@
     if([segue.identifier isEqualToString:@"AddItem"])
     {
         UINavigationController *navigationController = segue.destinationViewController;
-        AddItemViewController *controller = (AddItemViewController *)navigationController.topViewController;
+        DetailItemViewController *controller = (DetailItemViewController *)navigationController.topViewController;
         controller.delegate = self;
     }
     else if([segue.identifier isEqualToString:@"EditItem"])
     {
         UINavigationController *navigationController = segue.destinationViewController;
-        AddItemViewController *controller = (AddItemViewController *)navigationController.topViewController;
+        DetailItemViewController *controller = (DetailItemViewController *)navigationController.topViewController;
         controller.delegate = self;
         controller.itemToEdit = sender;
     }
@@ -124,7 +124,7 @@
 }
 
 #pragma mark - AddItemViewController Delegate
-- (void)AddItemViewController:(AddItemViewController *)controller didFinishAddingItem:(CheckListItem *)item
+- (void)DetailItemViewController:(DetailItemViewController *)controller didFinishAddingItem:(CheckListItem *)item
 {
     int newIndex = [items count];
     [items addObject:item];
@@ -134,7 +134,7 @@
     [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
     [self dismissViewControllerAnimated:YES completion:Nil];
 }
-- (void)AddItemViewControllerDidCancel:(AddItemViewController *)controller
+- (void)DetailItemViewControllerDidCancel:(DetailItemViewController *)controller
 {
     [self dismissViewControllerAnimated:YES completion:Nil];
 }
@@ -143,7 +143,7 @@
     CheckListItem *item = [items objectAtIndex:indexPath.row];
     [self performSegueWithIdentifier:@"EditItem" sender:item];
 }
-- (void)AddItemViewController:(AddItemViewController *)controller didFinishEditItem:(CheckListItem *)item
+- (void)DetailItemViewController:(DetailItemViewController *)controller didFinishEditItem:(CheckListItem *)item
 {
     int index = [items indexOfObject:item];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
