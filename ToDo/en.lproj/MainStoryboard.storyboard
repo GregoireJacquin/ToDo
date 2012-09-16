@@ -83,9 +83,9 @@
                                                     <rect key="frame" x="20" y="6" width="260" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     <connections>
-                                                        <outlet property="delegate" destination="INq-5X-ARg" id="7Sb-Ae-tmS"/>
+                                                        <outlet property="delegate" destination="INq-5X-ARg" id="dNu-Ti-VvW"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -114,7 +114,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="doneBarButton" destination="51j-j9-SRz" id="ugP-Qc-r2p"/>
-                        <outlet property="textField" destination="Byo-aE-oCv" id="20S-u6-aeb"/>
                     </connections>
                 </tableViewController>
             </objects>
