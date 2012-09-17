@@ -19,7 +19,13 @@
                             <outlet property="delegate" destination="Loz-lj-sYC" id="zZL-nA-bbr"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Checklist" id="mBm-kU-tOL"/>
+                    <navigationItem key="navigationItem" title="Checklist" id="mBm-kU-tOL">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="OgA-z0-Ogc">
+                            <connections>
+                                <segue destination="2WR-UI-SJ7" kind="modal" identifier="AddCheckList" id="qto-Or-sGE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="huh-7S-jf0" kind="push" identifier="ShowCheckList" id="vqR-vr-mTw"/>
                     </connections>
@@ -81,6 +87,21 @@
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="470" y="-490"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1oI-ko-6OH">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E0J-Dh-HMg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="ListNavigationController" definesPresentationContext="YES" id="2WR-UI-SJ7" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="edH-oy-cfN">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="NQ1-Tn-98E" kind="relationship" relationship="rootViewController" id="NyK-cp-Emu"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="450" y="137"/>
         </scene>
         <!--Detail Item View Controller - Add Item-->
         <scene sceneID="5cH-ho-7ep">
@@ -177,6 +198,66 @@
             </objects>
             <point key="canvasLocation" x="-531" y="-495"/>
         </scene>
+        <!--Detail List View Controller - Add list-->
+        <scene sceneID="QNV-rU-t5L">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HtH-RB-r5c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="NQ1-Tn-98E" customClass="DetailListViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="vBs-ya-Iwm">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="fHZ-fc-Gx3">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="PJ3-qi-fcH">
+                                        <rect key="frame" x="0.0" y="10" width="320" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add item" minimumFontSize="17" id="h9q-IT-3ay">
+                                                    <rect key="frame" x="20" y="6" width="260" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="NQ1-Tn-98E" id="58Z-Lk-qsd"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="NQ1-Tn-98E" id="K8s-7T-HIV"/>
+                            <outlet property="delegate" destination="NQ1-Tn-98E" id="PQC-fm-IpA"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Add list" id="KNb-hb-sOJ">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Bzr-TD-gsZ">
+                            <connections>
+                                <action selector="cancel" destination="NQ1-Tn-98E" id="eMH-dL-vuH"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="done" id="3wm-Yt-UUv">
+                            <connections>
+                                <action selector="done" destination="NQ1-Tn-98E" id="0tX-Vu-EID"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="doneBarButton" destination="3wm-Yt-UUv" id="6H0-L5-eL9"/>
+                        <outlet property="textField" destination="h9q-IT-3ay" id="a6u-Wj-dts"/>
+                    </connections>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="954" y="137"/>
+        </scene>
     </scenes>
     <classes>
         <class className="AllListsViewController" superclassName="UITableViewController">
@@ -187,6 +268,15 @@
         </class>
         <class className="DetailItemViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailItemViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel"/>
+                <relationship kind="action" name="done"/>
+                <relationship kind="outlet" name="doneBarButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="DetailListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailListViewController.h"/>
             <relationships>
                 <relationship kind="action" name="cancel"/>
                 <relationship kind="action" name="done"/>

@@ -18,6 +18,7 @@
 		B886846E15FCBB10009D49C1 /* CheckListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B886846D15FCBB10009D49C1 /* CheckListViewController.m */; };
 		B8E05202160737BA0049F23A /* CheckList.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E05201160737BA0049F23A /* CheckList.m */; };
 		B8E052051607381D0049F23A /* AllListsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E052041607381D0049F23A /* AllListsViewController.m */; };
+		B8F0F4E51607895800DE6359 /* DetailListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F0F4E41607895800DE6359 /* DetailListViewController.m */; };
 		B8F52DDB15FFCA9C0001F1DF /* DetailItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F52DDA15FFCA9C0001F1DF /* DetailItemViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,8 @@
 		B8E05201160737BA0049F23A /* CheckList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckList.m; sourceTree = "<group>"; };
 		B8E052031607381D0049F23A /* AllListsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllListsViewController.h; sourceTree = "<group>"; };
 		B8E052041607381D0049F23A /* AllListsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllListsViewController.m; sourceTree = "<group>"; };
+		B8F0F4E31607895800DE6359 /* DetailListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailListViewController.h; sourceTree = "<group>"; };
+		B8F0F4E41607895800DE6359 /* DetailListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailListViewController.m; sourceTree = "<group>"; };
 		B8F52DD915FFCA9C0001F1DF /* DetailItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailItemViewController.h; sourceTree = "<group>"; };
 		B8F52DDA15FFCA9C0001F1DF /* DetailItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailItemViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +100,8 @@
 				B886846D15FCBB10009D49C1 /* CheckListViewController.m */,
 				B8F52DD915FFCA9C0001F1DF /* DetailItemViewController.h */,
 				B8F52DDA15FFCA9C0001F1DF /* DetailItemViewController.m */,
+				B8F0F4E31607895800DE6359 /* DetailListViewController.h */,
+				B8F0F4E41607895800DE6359 /* DetailListViewController.m */,
 				B8E052031607381D0049F23A /* AllListsViewController.h */,
 				B8E052041607381D0049F23A /* AllListsViewController.m */,
 				B886845E15FCBB10009D49C1 /* Supporting Files */,
@@ -196,6 +201,7 @@
 				B8F52DDB15FFCA9C0001F1DF /* DetailItemViewController.m in Sources */,
 				B8E05202160737BA0049F23A /* CheckList.m in Sources */,
 				B8E052051607381D0049F23A /* AllListsViewController.m in Sources */,
+				B8F0F4E51607895800DE6359 /* DetailListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

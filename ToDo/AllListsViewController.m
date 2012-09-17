@@ -81,6 +81,24 @@
         controller.checkList = sender;
         
     }
+    else if([segue.identifier isEqualToString:@"AddCheckList"])
+    {
+        UINavigationController *navigation = segue.destinationViewController;
+        DetailListViewController *controller = (DetailListViewController *)navigation.topViewController;
+        controller.delegate = self;
+        controller.checkListToEdit = nil;
+        
+    }
+}
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    UINavigationController *navigation = [self.storyboard instantiateViewControllerWithIdentifier:@"ListNavigationController"];
+    DetailListViewController *controller = (DetailListViewController *)navigation.topViewController;
+    controller.delegate = self;
+    CheckList *checkList = [lists objectAtIndex:indexPath.row];
+    controller.checkListToEdit = checkList;
+    
+    [self presentViewController:navigation animated:YES completion:nil];
 }
 
 #pragma mark - Table view data source
@@ -108,7 +126,13 @@
     
     return cell;
 }
-
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [lists removeObjectAtIndex:indexPath.row];
+    
+    NSArray * indexPaths = [NSArray arrayWithObject: indexPath];
+    [tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -162,5 +186,34 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
 }
+#pragma mark - DetailListViewController Delegate
+- (void)DetailListViewController:(DetailListViewController *)controller didFinishAddingItem:(CheckList *)checkList
+{
+    int newIndex = [lists count];
+    [lists addObject:checkList];
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:newIndex inSection:0];
+    NSArray *indexPaths = [NSArray arrayWithObject:indexPath];
+    [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+    //[self saveCheckListItems];
+    [self dismissViewControllerAnimated:YES completion:Nil];
+}
+- (void)DetailListViewControllerDidCancel:(DetailListViewController *)controller
+{
+    [self dismissViewControllerAnimated:YES completion:Nil];
+}
+
+- (void)DetailListViewController:(DetailListViewController *)controller didFinishEditItem:(CheckList *)checkList
+{
+    int index = [lists indexOfObject:checkList];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    cell.textLabel.text = checkList.name;
+    //[self configureTextForCell:cell whitAtItem:checkList];
+    //[self saveCheckListItems];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 @end
