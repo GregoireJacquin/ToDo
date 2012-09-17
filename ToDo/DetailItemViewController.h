@@ -24,7 +24,6 @@
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *doneBarButton;
 @property (strong, nonatomic) id <DetailItemViewControllerDelegate> delegate;
 @property (strong, nonatomic) CheckListItem *itemToEdit;
-
 - (IBAction)cancel;
 - (IBAction)done;
 @end

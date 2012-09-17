@@ -6,17 +6,19 @@
 //  Copyright (c) 2012 Grégoire Jacquin. All rights reserved.
 //
 
-#import "CheckListItemViewController.h"
+#import "CheckListViewController.h"
 #import "CheckListItem.h"
+#import "CheckList.h"
 
-@interface CheckListItemViewController ()
+@interface CheckListViewController ()
 
 @end
 
-@implementation CheckListItemViewController
+@implementation CheckListViewController
 {
     NSMutableArray *items;
 }
+@synthesize checkList;
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     if(self = [super initWithCoder:aDecoder])
@@ -29,6 +31,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = checkList.name;
 	// Do any additional setup after loading the view, typically from a nib.
     /*items = [[NSMutableArray alloc] initWithCapacity:20];
     
