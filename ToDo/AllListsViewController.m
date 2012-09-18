@@ -18,6 +18,14 @@
 - (void)viewWillAppear:(BOOL)animated
 {
 	[super viewWillAppear:animated];
+    
+    
+	[self.tableView reloadData];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+	[super viewDidAppear:animated];
     self.navigationController.delegate = self;
     int index = [dataModel indexOfSelectedCheckList];
     if(index >= 0)
@@ -25,13 +33,6 @@
         CheckList *checklist = [self.dataModel.lists objectAtIndex:index];
         [self performSegueWithIdentifier:@"ShowChecklist" sender:checklist];
     }
-    
-	//[self.tableView reloadData];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-	[super viewDidAppear:animated];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
