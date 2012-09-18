@@ -88,7 +88,8 @@
         checkList.name = textField.text;
         [delegate DetailListViewController:self didFinishAddingItem:checkList];
     }
-    else {
+    else
+    {
         checkListToEdit.name = textField.text;
         [delegate DetailListViewController:self didFinishEditItem:checkListToEdit];
     }

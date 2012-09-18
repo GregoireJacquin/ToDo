@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "DetailListViewController.h"
+#import "DataModel.h"
 
-@interface AllListsViewController : UITableViewController <DetailListViewControllerDelegate>
+@interface AllListsViewController : UITableViewController <DetailListViewControllerDelegate , UINavigationControllerDelegate>
+
+@property (strong, nonatomic) DataModel *dataModel;
 
 @end

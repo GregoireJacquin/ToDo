@@ -22,12 +22,12 @@
                     <navigationItem key="navigationItem" title="Checklist" id="mBm-kU-tOL">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="OgA-z0-Ogc">
                             <connections>
-                                <segue destination="2WR-UI-SJ7" kind="modal" identifier="AddCheckList" id="qto-Or-sGE"/>
+                                <segue destination="2WR-UI-SJ7" kind="modal" identifier="AddChecklist" id="hr8-fj-4q6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="huh-7S-jf0" kind="push" identifier="ShowCheckList" id="vqR-vr-mTw"/>
+                        <segue destination="huh-7S-jf0" kind="push" identifier="ShowChecklist" id="Utv-x9-vtf"/>
                     </connections>
                 </tableViewController>
             </objects>
@@ -157,6 +157,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="doneBarButton" destination="51j-j9-SRz" id="ugP-Qc-r2p"/>
+                        <outlet property="textField" destination="Byo-aE-oCv" id="tFZ-cn-Sen"/>
                     </connections>
                 </tableViewController>
             </objects>

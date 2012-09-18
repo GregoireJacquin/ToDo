@@ -22,7 +22,7 @@
 
 @property (strong, nonatomic) IBOutlet UITextField *textField;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *doneBarButton;
-@property (strong, nonatomic) id <DetailListViewControllerDelegate> delegate;
+@property (weak, nonatomic) id <DetailListViewControllerDelegate> delegate;
 @property (strong, nonatomic) CheckList *checkListToEdit;
 - (IBAction)cancel;
 - (IBAction)done;
