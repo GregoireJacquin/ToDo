@@ -18,6 +18,7 @@
 		B886846E15FCBB10009D49C1 /* CheckListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B886846D15FCBB10009D49C1 /* CheckListViewController.m */; };
 		B8E05202160737BA0049F23A /* CheckList.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E05201160737BA0049F23A /* CheckList.m */; };
 		B8E052051607381D0049F23A /* AllListsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E052041607381D0049F23A /* AllListsViewController.m */; };
+		B8EFD74C160BA62D00F0C7AB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8EFD74B160BA62D00F0C7AB /* Default-568h@2x.png */; };
 		B8F0F4E51607895800DE6359 /* DetailListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F0F4E41607895800DE6359 /* DetailListViewController.m */; };
 		B8F0F4EB1607A1E100DE6359 /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F0F4EA1607A1E100DE6359 /* DataModel.m */; };
 		B8F52DDB15FFCA9C0001F1DF /* DetailItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F52DDA15FFCA9C0001F1DF /* DetailItemViewController.m */; };
@@ -43,6 +44,7 @@
 		B8E05201160737BA0049F23A /* CheckList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckList.m; sourceTree = "<group>"; };
 		B8E052031607381D0049F23A /* AllListsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllListsViewController.h; sourceTree = "<group>"; };
 		B8E052041607381D0049F23A /* AllListsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllListsViewController.m; sourceTree = "<group>"; };
+		B8EFD74B160BA62D00F0C7AB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B8F0F4E31607895800DE6359 /* DetailListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailListViewController.h; sourceTree = "<group>"; };
 		B8F0F4E41607895800DE6359 /* DetailListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailListViewController.m; sourceTree = "<group>"; };
 		B8F0F4E91607A1E100DE6359 /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 		B886844815FCBB10009D49C1 = {
 			isa = PBXGroup;
 			children = (
+				B8EFD74B160BA62D00F0C7AB /* Default-568h@2x.png */,
 				B886845D15FCBB10009D49C1 /* ToDo */,
 				B886845615FCBB10009D49C1 /* Frameworks */,
 				B886845415FCBB10009D49C1 /* Products */,
@@ -205,6 +208,7 @@
 			files = (
 				B886846215FCBB10009D49C1 /* InfoPlist.strings in Resources */,
 				B886846B15FCBB10009D49C1 /* MainStoryboard.storyboard in Resources */,
+				B8EFD74C160BA62D00F0C7AB /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

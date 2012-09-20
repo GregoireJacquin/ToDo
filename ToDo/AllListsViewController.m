@@ -26,7 +26,7 @@
 {
 	[super viewDidAppear:animated];
     self.navigationController.delegate = self;
-    int index = [dataModel indexOfSelectedCheckList];
+    if(index >= 0 && index < [self.dataModel.lists count])
     if(index >= 0 && index < [self.dataModel.lists count])
     {
         CheckList *checklist = [self.dataModel.lists objectAtIndex:index];
