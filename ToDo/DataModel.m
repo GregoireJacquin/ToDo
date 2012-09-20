@@ -66,6 +66,13 @@
 - (void) setIndexOfSelectedCheckList:(int)index
 {
     [[NSUserDefaults standardUserDefaults]setInteger:index forKey:@"Checklistindex"];
+}- (void)handleFirstime
+{
+    BOOL firsttime = [[NSUserDefaults standardUserDefaults] integerForKey:@"Firsttime"];
+    if (firsttime) {
+        CheckList *checklist = [[CheckList alloc]init];
+    }
+        
 }
 - (void)handleFirstime
 {
