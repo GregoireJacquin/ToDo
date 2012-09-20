@@ -86,7 +86,7 @@
                     </connections>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="470" y="-490"/>
+            <point key="canvasLocation" x="478" y="-495"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1oI-ko-6OH">

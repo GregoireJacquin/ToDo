@@ -7,6 +7,7 @@
 //
 
 #import "DataModel.h"
+#import "CheckList.h"
 
 @implementation DataModel
 @synthesize lists;
@@ -15,6 +16,7 @@
     if (self = [super init]) {
         [self loadCheckList];
         [self registerDefaults];
+        [self handleFirstime];
     }
     return self;
 }
@@ -54,7 +56,7 @@
 }
 - (void)registerDefaults
 {
-    NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:-1],@"Checklistindex", nil];
+    NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:-1],@"Checklistindex",[NSNumber numberWithBool:YES],@"Firsttime", nil];
     [[NSUserDefaults standardUserDefaults] registerDefaults:dictionary];
 }
 - (int)indexOfSelectedCheckList
@@ -64,5 +66,18 @@
 - (void) setIndexOfSelectedCheckList:(int)index
 {
     [[NSUserDefaults standardUserDefaults]setInteger:index forKey:@"Checklistindex"];
+}
+- (void)handleFirstime
+{
+    BOOL firsttime = [[NSUserDefaults standardUserDefaults] integerForKey:@"Firsttime"];
+    if (firsttime) {
+        CheckList *checklist = [[CheckList alloc]init];
+        checklist.name = @"Liste";
+        [lists addObject:checklist];
+        [self setIndexOfSelectedCheckList:0];
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"Firsttime"];
+        
+    }
+    
 }
 @end

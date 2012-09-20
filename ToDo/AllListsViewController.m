@@ -18,20 +18,20 @@
 - (void)viewWillAppear:(BOOL)animated
 {
 	[super viewWillAppear:animated];
-    self.navigationController.delegate = self;
-    int index = [dataModel indexOfSelectedCheckList];
-    if(index >= 0)
-    {
-        CheckList *checklist = [self.dataModel.lists objectAtIndex:index];
-        [self performSegueWithIdentifier:@"ShowChecklist" sender:checklist];
-    }
     
-	//[self.tableView reloadData];
+	[self.tableView reloadData];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
 	[super viewDidAppear:animated];
+    self.navigationController.delegate = self;
+    int index = [dataModel indexOfSelectedCheckList];
+    if(index >= 0 && index < [self.dataModel.lists count])
+    {
+        CheckList *checklist = [self.dataModel.lists objectAtIndex:index];
+        [self performSegueWithIdentifier:@"ShowChecklist" sender:checklist];
+    }
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -66,13 +66,19 @@
     
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	if (cell == nil) {
-		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
 	}
     
 	CheckList *checklist = [self.dataModel.lists objectAtIndex:indexPath.row];
     
 	cell.textLabel.text = checklist.name;
 	cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+    if([checklist.items count] == 0)
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"No items"];
+    else if([checklist countUncheckedItems] == 0)
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"Done !"];
+    else
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%d Remaining",[checklist countUncheckedItems]];
     
 	return cell;
 }
@@ -138,7 +144,7 @@
 {
     if(self == viewController)
     {
-        [dataModel setIndexOfSelectedCheckList:-1];
+        [self.dataModel setIndexOfSelectedCheckList:-1];
     }
 }
 

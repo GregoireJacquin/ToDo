@@ -7,6 +7,7 @@
 //
 
 #import "CheckList.h"
+#import "CheckListItem.h"
 
 @implementation CheckList
 @synthesize name;
@@ -33,5 +34,14 @@
 {
     [aCoder encodeObject:self.items forKey:@"Items"];
     [aCoder encodeObject:self.name forKey:@"Name"];
+}
+- (int)countUncheckedItems
+{
+    int count = 0;
+    for (CheckListItem *item in items) {
+        if(!item.checked)
+            count += 1;
+    }
+    return count;
 }
 @end
