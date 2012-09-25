@@ -80,4 +80,8 @@
     }
     
 }
+- (void)sortCheckList
+{
+    [self.lists sortUsingSelector:@selector(comparer:)];
+}
 @end

@@ -11,7 +11,8 @@
 @interface DataModel : NSObject
 
 @property (strong, nonatomic)NSMutableArray *lists;
--(void) saveCheckList;
-- (int)indexOfSelectedCheckList;
+- (void) saveCheckList;
+- (int) indexOfSelectedCheckList;
 - (void) setIndexOfSelectedCheckList:(int)index;
+- (void) sortCheckList;
 @end

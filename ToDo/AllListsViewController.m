@@ -121,6 +121,7 @@
 {
     int newIndex = [dataModel.lists count];
     [dataModel.lists addObject:checkList];
+    [dataModel sortCheckList];
     
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:newIndex inSection:0];
     NSArray *indexPaths = [NSArray arrayWithObject:indexPath];
@@ -131,6 +132,7 @@
 - (void)DetailListViewController:(DetailListViewController *)controller didFinishEditItem:(CheckList *)checkList
 {
     int index = [dataModel.lists indexOfObject:checkList];
+    [dataModel sortCheckList];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
     
