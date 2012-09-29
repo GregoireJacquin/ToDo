@@ -26,7 +26,7 @@
 {
 	[super viewDidAppear:animated];
     self.navigationController.delegate = self;
-    if(index >= 0 && index < [self.dataModel.lists count])
+    int index = [dataModel indexOfSelectedCheckList];
     if(index >= 0 && index < [self.dataModel.lists count])
     {
         CheckList *checklist = [self.dataModel.lists objectAtIndex:index];
@@ -72,6 +72,7 @@
 	CheckList *checklist = [self.dataModel.lists objectAtIndex:indexPath.row];
     
 	cell.textLabel.text = checklist.name;
+    cell.imageView.image = [UIImage imageNamed:checklist.iconName];
 	cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
     if([checklist.items count] == 0)
         cell.detailTextLabel.text = [NSString stringWithFormat:@"No items"];

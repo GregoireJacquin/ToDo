@@ -16,6 +16,27 @@
 		B886846815FCBB10009D49C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B886846715FCBB10009D49C1 /* AppDelegate.m */; };
 		B886846B15FCBB10009D49C1 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B886846915FCBB10009D49C1 /* MainStoryboard.storyboard */; };
 		B886846E15FCBB10009D49C1 /* CheckListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B886846D15FCBB10009D49C1 /* CheckListViewController.m */; };
+		B8D504ED1613962400AC37D8 /* Appointments.png in Resources */ = {isa = PBXBuildFile; fileRef = B8D504D91613962400AC37D8 /* Appointments.png */; };
+		B8D504EE1613962400AC37D8 /* Appointments@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8D504DA1613962400AC37D8 /* Appointments@2x.png */; };
+		B8D504EF1613962400AC37D8 /* Birthdays.png in Resources */ = {isa = PBXBuildFile; fileRef = B8D504DB1613962400AC37D8 /* Birthdays.png */; };
+		B8D504F01613962400AC37D8 /* Birthdays@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8D504DC1613962400AC37D8 /* Birthdays@2x.png */; };
+		B8D504F11613962400AC37D8 /* Chores.png in Resources */ = {isa = PBXBuildFile; fileRef = B8D504DD1613962400AC37D8 /* Chores.png */; };
+		B8D504F21613962400AC37D8 /* Chores@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8D504DE1613962400AC37D8 /* Chores@2x.png */; };
+		B8D504F31613962400AC37D8 /* Drinks.png in Resources */ = {isa = PBXBuildFile; fileRef = B8D504DF1613962400AC37D8 /* Drinks.png */; };
+		B8D504F41613962400AC37D8 /* Drinks@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8D504E01613962400AC37D8 /* Drinks@2x.png */; };
+		B8D504F51613962400AC37D8 /* Folder.png in Resources */ = {isa = PBXBuildFile; fileRef = B8D504E11613962400AC37D8 /* Folder.png */; };
+		B8D504F61613962400AC37D8 /* Folder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8D504E21613962400AC37D8 /* Folder@2x.png */; };
+		B8D504F71613962400AC37D8 /* Groceries.png in Resources */ = {isa = PBXBuildFile; fileRef = B8D504E31613962400AC37D8 /* Groceries.png */; };
+		B8D504F81613962400AC37D8 /* Groceries@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8D504E41613962400AC37D8 /* Groceries@2x.png */; };
+		B8D504F91613962400AC37D8 /* Inbox.png in Resources */ = {isa = PBXBuildFile; fileRef = B8D504E51613962400AC37D8 /* Inbox.png */; };
+		B8D504FA1613962400AC37D8 /* Inbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8D504E61613962400AC37D8 /* Inbox@2x.png */; };
+		B8D504FB1613962400AC37D8 /* No Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B8D504E71613962400AC37D8 /* No Icon.png */; };
+		B8D504FC1613962400AC37D8 /* No Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8D504E81613962400AC37D8 /* No Icon@2x.png */; };
+		B8D504FD1613962400AC37D8 /* Photos.png in Resources */ = {isa = PBXBuildFile; fileRef = B8D504E91613962400AC37D8 /* Photos.png */; };
+		B8D504FE1613962400AC37D8 /* Photos@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8D504EA1613962400AC37D8 /* Photos@2x.png */; };
+		B8D504FF1613962400AC37D8 /* Trips.png in Resources */ = {isa = PBXBuildFile; fileRef = B8D504EB1613962400AC37D8 /* Trips.png */; };
+		B8D505001613962400AC37D8 /* Trips@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8D504EC1613962400AC37D8 /* Trips@2x.png */; };
+		B8D50504161398E300AC37D8 /* IconPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D50503161398E300AC37D8 /* IconPickerViewController.m */; };
 		B8E05202160737BA0049F23A /* CheckList.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E05201160737BA0049F23A /* CheckList.m */; };
 		B8E052051607381D0049F23A /* AllListsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E052041607381D0049F23A /* AllListsViewController.m */; };
 		B8EFD74C160BA62D00F0C7AB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8EFD74B160BA62D00F0C7AB /* Default-568h@2x.png */; };
@@ -40,6 +61,28 @@
 		B886846A15FCBB10009D49C1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		B886846C15FCBB10009D49C1 /* CheckListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckListViewController.h; sourceTree = "<group>"; };
 		B886846D15FCBB10009D49C1 /* CheckListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckListViewController.m; sourceTree = "<group>"; };
+		B8D504D91613962400AC37D8 /* Appointments.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Appointments.png; sourceTree = "<group>"; };
+		B8D504DA1613962400AC37D8 /* Appointments@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Appointments@2x.png"; sourceTree = "<group>"; };
+		B8D504DB1613962400AC37D8 /* Birthdays.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Birthdays.png; sourceTree = "<group>"; };
+		B8D504DC1613962400AC37D8 /* Birthdays@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Birthdays@2x.png"; sourceTree = "<group>"; };
+		B8D504DD1613962400AC37D8 /* Chores.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chores.png; sourceTree = "<group>"; };
+		B8D504DE1613962400AC37D8 /* Chores@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chores@2x.png"; sourceTree = "<group>"; };
+		B8D504DF1613962400AC37D8 /* Drinks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Drinks.png; sourceTree = "<group>"; };
+		B8D504E01613962400AC37D8 /* Drinks@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Drinks@2x.png"; sourceTree = "<group>"; };
+		B8D504E11613962400AC37D8 /* Folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Folder.png; sourceTree = "<group>"; };
+		B8D504E21613962400AC37D8 /* Folder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Folder@2x.png"; sourceTree = "<group>"; };
+		B8D504E31613962400AC37D8 /* Groceries.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Groceries.png; sourceTree = "<group>"; };
+		B8D504E41613962400AC37D8 /* Groceries@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Groceries@2x.png"; sourceTree = "<group>"; };
+		B8D504E51613962400AC37D8 /* Inbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Inbox.png; sourceTree = "<group>"; };
+		B8D504E61613962400AC37D8 /* Inbox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Inbox@2x.png"; sourceTree = "<group>"; };
+		B8D504E71613962400AC37D8 /* No Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "No Icon.png"; sourceTree = "<group>"; };
+		B8D504E81613962400AC37D8 /* No Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "No Icon@2x.png"; sourceTree = "<group>"; };
+		B8D504E91613962400AC37D8 /* Photos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Photos.png; sourceTree = "<group>"; };
+		B8D504EA1613962400AC37D8 /* Photos@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Photos@2x.png"; sourceTree = "<group>"; };
+		B8D504EB1613962400AC37D8 /* Trips.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Trips.png; sourceTree = "<group>"; };
+		B8D504EC1613962400AC37D8 /* Trips@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Trips@2x.png"; sourceTree = "<group>"; };
+		B8D50502161398E300AC37D8 /* IconPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconPickerViewController.h; sourceTree = "<group>"; };
+		B8D50503161398E300AC37D8 /* IconPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconPickerViewController.m; sourceTree = "<group>"; };
 		B8E05200160737BA0049F23A /* CheckList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckList.h; sourceTree = "<group>"; };
 		B8E05201160737BA0049F23A /* CheckList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckList.m; sourceTree = "<group>"; };
 		B8E052031607381D0049F23A /* AllListsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllListsViewController.h; sourceTree = "<group>"; };
@@ -98,6 +141,7 @@
 		B886845D15FCBB10009D49C1 /* ToDo */ = {
 			isa = PBXGroup;
 			children = (
+				B8D504D81613962400AC37D8 /* Checklist Icons */,
 				B8F0F4E81607A0DB00DE6359 /* List */,
 				B8F0F4E71607A0BA00DE6359 /* Checklist */,
 				B8F52DD815FFC9EC0001F1DF /* Model */,
@@ -120,6 +164,33 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B8D504D81613962400AC37D8 /* Checklist Icons */ = {
+			isa = PBXGroup;
+			children = (
+				B8D504D91613962400AC37D8 /* Appointments.png */,
+				B8D504DA1613962400AC37D8 /* Appointments@2x.png */,
+				B8D504DB1613962400AC37D8 /* Birthdays.png */,
+				B8D504DC1613962400AC37D8 /* Birthdays@2x.png */,
+				B8D504DD1613962400AC37D8 /* Chores.png */,
+				B8D504DE1613962400AC37D8 /* Chores@2x.png */,
+				B8D504DF1613962400AC37D8 /* Drinks.png */,
+				B8D504E01613962400AC37D8 /* Drinks@2x.png */,
+				B8D504E11613962400AC37D8 /* Folder.png */,
+				B8D504E21613962400AC37D8 /* Folder@2x.png */,
+				B8D504E31613962400AC37D8 /* Groceries.png */,
+				B8D504E41613962400AC37D8 /* Groceries@2x.png */,
+				B8D504E51613962400AC37D8 /* Inbox.png */,
+				B8D504E61613962400AC37D8 /* Inbox@2x.png */,
+				B8D504E71613962400AC37D8 /* No Icon.png */,
+				B8D504E81613962400AC37D8 /* No Icon@2x.png */,
+				B8D504E91613962400AC37D8 /* Photos.png */,
+				B8D504EA1613962400AC37D8 /* Photos@2x.png */,
+				B8D504EB1613962400AC37D8 /* Trips.png */,
+				B8D504EC1613962400AC37D8 /* Trips@2x.png */,
+			);
+			path = "Checklist Icons";
+			sourceTree = "<group>";
+		};
 		B8F0F4E71607A0BA00DE6359 /* Checklist */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +209,8 @@
 				B8E052041607381D0049F23A /* AllListsViewController.m */,
 				B8F0F4E31607895800DE6359 /* DetailListViewController.h */,
 				B8F0F4E41607895800DE6359 /* DetailListViewController.m */,
+				B8D50502161398E300AC37D8 /* IconPickerViewController.h */,
+				B8D50503161398E300AC37D8 /* IconPickerViewController.m */,
 			);
 			name = List;
 			sourceTree = "<group>";
@@ -209,6 +282,26 @@
 				B886846215FCBB10009D49C1 /* InfoPlist.strings in Resources */,
 				B886846B15FCBB10009D49C1 /* MainStoryboard.storyboard in Resources */,
 				B8EFD74C160BA62D00F0C7AB /* Default-568h@2x.png in Resources */,
+				B8D504ED1613962400AC37D8 /* Appointments.png in Resources */,
+				B8D504EE1613962400AC37D8 /* Appointments@2x.png in Resources */,
+				B8D504EF1613962400AC37D8 /* Birthdays.png in Resources */,
+				B8D504F01613962400AC37D8 /* Birthdays@2x.png in Resources */,
+				B8D504F11613962400AC37D8 /* Chores.png in Resources */,
+				B8D504F21613962400AC37D8 /* Chores@2x.png in Resources */,
+				B8D504F31613962400AC37D8 /* Drinks.png in Resources */,
+				B8D504F41613962400AC37D8 /* Drinks@2x.png in Resources */,
+				B8D504F51613962400AC37D8 /* Folder.png in Resources */,
+				B8D504F61613962400AC37D8 /* Folder@2x.png in Resources */,
+				B8D504F71613962400AC37D8 /* Groceries.png in Resources */,
+				B8D504F81613962400AC37D8 /* Groceries@2x.png in Resources */,
+				B8D504F91613962400AC37D8 /* Inbox.png in Resources */,
+				B8D504FA1613962400AC37D8 /* Inbox@2x.png in Resources */,
+				B8D504FB1613962400AC37D8 /* No Icon.png in Resources */,
+				B8D504FC1613962400AC37D8 /* No Icon@2x.png in Resources */,
+				B8D504FD1613962400AC37D8 /* Photos.png in Resources */,
+				B8D504FE1613962400AC37D8 /* Photos@2x.png in Resources */,
+				B8D504FF1613962400AC37D8 /* Trips.png in Resources */,
+				B8D505001613962400AC37D8 /* Trips@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +321,7 @@
 				B8E052051607381D0049F23A /* AllListsViewController.m in Sources */,
 				B8F0F4E51607895800DE6359 /* DetailListViewController.m in Sources */,
 				B8F0F4EB1607A1E100DE6359 /* DataModel.m in Sources */,
+				B8D50504161398E300AC37D8 /* IconPickerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

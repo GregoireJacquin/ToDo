@@ -14,6 +14,9 @@
 @end
 
 @implementation DetailListViewController
+{
+    NSString *iconName;
+}
 @synthesize textField;
 @synthesize doneBarButton;
 @synthesize delegate;
@@ -27,6 +30,14 @@
     }
     return self;
 }
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    if(self = [super initWithCoder:aDecoder])
+    {
+        iconName = @"No Icon";
+    }
+    return self;
+}
 
 - (void)viewDidLoad
 {
@@ -37,7 +48,9 @@
         self.title = @"Edit checklist";
         self.textField.text = checkListToEdit.name;
         self.doneBarButton.enabled = YES;
+        iconName = checkListToEdit.iconName;
     }
+    self.picker.image = [UIImage imageNamed:iconName];
     
     
     // Uncomment the following line to preserve selection between presentations.
@@ -51,9 +64,18 @@
 {
     [self setTextField:nil];
     [self setDoneBarButton:nil];
+    [self setPicker:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"iconPicker"])
+    {
+        IconPickerViewController *controller = segue.destinationViewController;
+        controller.delegate = self;
+    }
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -76,7 +98,10 @@
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 0;
+    if(indexPath.row == 1)
+        return indexPath;
+    else
+        return 0;
 }
 
 #pragma mark ToDo AddItem
@@ -86,11 +111,13 @@
     {
         CheckList *checkList = [[CheckList alloc] init];
         checkList.name = textField.text;
+        checkList.iconName = iconName;
         [delegate DetailListViewController:self didFinishAddingItem:checkList];
     }
     else
     {
         checkListToEdit.name = textField.text;
+        checkListToEdit.iconName = iconName;
         [delegate DetailListViewController:self didFinishEditItem:checkListToEdit];
     }
     //[self  dismissViewControllerAnimated:YES completion:nil];
@@ -99,5 +126,11 @@
 {
     //[self  dismissViewControllerAnimated:YES completion:nil];
     [delegate DetailListViewControllerDidCancel:self];
+}
+- (void)iconPicker:(IconPickerViewController *)controller didPickerIcon:(NSString *)theIconName
+{
+    iconName = theIconName;
+    self.picker.image = [UIImage imageNamed:iconName];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 @end

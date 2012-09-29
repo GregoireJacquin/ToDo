@@ -12,12 +12,14 @@
 @implementation CheckList
 @synthesize name;
 @synthesize items;
+@synthesize iconName;
 
 - (id)init
 {
     if(self = [super init])
     {
         items = [[NSMutableArray alloc]initWithCapacity:20];
+        iconName = @"No Icon";
     }
     return self;
 }

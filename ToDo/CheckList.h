@@ -12,6 +12,6 @@
 
 @property (copy, nonatomic)NSString *name;
 @property (strong, nonatomic)NSMutableArray *items;
-
+@property (copy, nonatomic)NSString *iconName;
 - (int) countUncheckedItems;
 @end
