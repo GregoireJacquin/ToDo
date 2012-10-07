@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
     </dependencies>
     <scenes>
-        <!--All Lists View Controller - Checklist-->
+        <!--All Lists View Controller - Lists-->
         <scene sceneID="KfJ-RH-VG6">
             <objects>
                 <tableViewController id="Loz-lj-sYC" customClass="AllListsViewController" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                             <outlet property="delegate" destination="Loz-lj-sYC" id="zZL-nA-bbr"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Checklist" id="mBm-kU-tOL">
+                    <navigationItem key="navigationItem" title="Lists" id="mBm-kU-tOL">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="OgA-z0-Ogc">
                             <connections>
                                 <segue destination="2WR-UI-SJ7" kind="modal" identifier="AddChecklist" id="hr8-fj-4q6"/>
@@ -31,9 +31,9 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j34-Of-z6e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-38" y="-495"/>
+            <point key="canvasLocation" x="-60" y="-495"/>
         </scene>
-        <!--Check List View Controller - Checklistitem-->
+        <!--Check List View Controller - Item-->
         <scene sceneID="Fg3-Wp-VKY">
             <objects>
                 <tableViewController id="huh-7S-jf0" customClass="CheckListViewController" sceneMemberID="viewController">
@@ -73,7 +73,7 @@
                             <outlet property="delegate" destination="huh-7S-jf0" id="s9u-VV-S2h"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Checklistitem" id="QSV-Zj-Ni1">
+                    <navigationItem key="navigationItem" title="Item" id="QSV-Zj-Ni1">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="OZU-pq-3gf">
                             <connections>
                                 <segue destination="BXd-zv-JAJ" kind="modal" identifier="AddItem" id="anU-Nv-Dey"/>
@@ -101,7 +101,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E0J-Dh-HMg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="450" y="137"/>
+            <point key="canvasLocation" x="478" y="137"/>
         </scene>
         <!--Detail Item View Controller - Add Item-->
         <scene sceneID="5cH-ho-7ep">
@@ -316,6 +316,36 @@
             <point key="canvasLocation" x="1444" y="137"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="AllListsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AllListsViewController.h"/>
+        </class>
+        <class className="CheckListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CheckListViewController.h"/>
+        </class>
+        <class className="DetailItemViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailItemViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel"/>
+                <relationship kind="action" name="done"/>
+                <relationship kind="outlet" name="doneBarButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="DetailListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailListViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel"/>
+                <relationship kind="action" name="done"/>
+                <relationship kind="outlet" name="doneBarButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="picker" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="IconPickerViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IconPickerViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
