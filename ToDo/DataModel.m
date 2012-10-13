@@ -56,7 +56,7 @@
 }
 - (void)registerDefaults
 {
-    NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:-1],@"Checklistindex",[NSNumber numberWithBool:YES],@"Firsttime", nil];
+    NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:-1],@"Checklistindex",[NSNumber numberWithBool:YES],@"Firsttime",[NSNumber numberWithInt:0],@"CheckListItem", nil];
     [[NSUserDefaults standardUserDefaults] registerDefaults:dictionary];
 }
 - (int)indexOfSelectedCheckList
@@ -83,5 +83,13 @@
 - (void)sortCheckList
 {
     [self.lists sortUsingSelector:@selector(comparer:)];
+}
++ (int)nextCheckListItem
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    int itemId = [userDefaults integerForKey:@"CheckListItem"];
+    [userDefaults setInteger:itemId + 1 forKey:@"CheckListItem"];
+    [userDefaults synchronize];
+    return itemId;
 }
 @end

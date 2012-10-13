@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B81B406716235EFD0005E494 /* DatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B81B406616235EFD0005E494 /* DatePickerViewController.m */; };
+		B85F94F91629BC9900A52B86 /* default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B85F94F71629BC9900A52B86 /* default@2x.png */; };
+		B85F94FA1629BC9900A52B86 /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = B85F94F81629BC9900A52B86 /* default.png */; };
 		B87ABF4815FD20C4009B6608 /* CheckListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B87ABF4715FD20C4009B6608 /* CheckListItem.m */; };
 		B886845815FCBB10009D49C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B886845715FCBB10009D49C1 /* UIKit.framework */; };
 		B886845A15FCBB10009D49C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B886845915FCBB10009D49C1 /* Foundation.framework */; };
@@ -53,6 +56,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B81B406516235EFD0005E494 /* DatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerViewController.h; sourceTree = "<group>"; };
+		B81B406616235EFD0005E494 /* DatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerViewController.m; sourceTree = "<group>"; };
+		B85F94F71629BC9900A52B86 /* default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default@2x.png"; sourceTree = "<group>"; };
+		B85F94F81629BC9900A52B86 /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
 		B87ABF4615FD20C4009B6608 /* CheckListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckListItem.h; sourceTree = "<group>"; };
 		B87ABF4715FD20C4009B6608 /* CheckListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckListItem.m; sourceTree = "<group>"; };
 		B886845315FCBB10009D49C1 /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +134,8 @@
 		B886844815FCBB10009D49C1 = {
 			isa = PBXGroup;
 			children = (
+				B85F94F71629BC9900A52B86 /* default@2x.png */,
+				B85F94F81629BC9900A52B86 /* default.png */,
 				B8EFD74B160BA62D00F0C7AB /* Default-568h@2x.png */,
 				B886845D15FCBB10009D49C1 /* ToDo */,
 				B886845615FCBB10009D49C1 /* Frameworks */,
@@ -227,6 +236,8 @@
 				B886846D15FCBB10009D49C1 /* CheckListViewController.m */,
 				B8F52DD915FFCA9C0001F1DF /* DetailItemViewController.h */,
 				B8F52DDA15FFCA9C0001F1DF /* DetailItemViewController.m */,
+				B81B406516235EFD0005E494 /* DatePickerViewController.h */,
+				B81B406616235EFD0005E494 /* DatePickerViewController.m */,
 			);
 			name = Checklist;
 			sourceTree = "<group>";
@@ -338,6 +349,8 @@
 				B8C5E061161748210010459C /* Icon.png in Resources */,
 				B8C5E062161748210010459C /* Icon@2x.png in Resources */,
 				B8C5E063161748210010459C /* iTunesArtwork in Resources */,
+				B85F94F91629BC9900A52B86 /* default@2x.png in Resources */,
+				B85F94FA1629BC9900A52B86 /* default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +371,7 @@
 				B8F0F4E51607895800DE6359 /* DetailListViewController.m in Sources */,
 				B8F0F4EB1607A1E100DE6359 /* DataModel.m in Sources */,
 				B8D50504161398E300AC37D8 /* IconPickerViewController.m in Sources */,
+				B81B406716235EFD0005E494 /* DatePickerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
